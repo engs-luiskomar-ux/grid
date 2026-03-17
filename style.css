@@ -66,3 +66,62 @@ body {
     opacity: 1;
     color: #fff;
 }
+
+.content {
+    grid-area: content;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box-spin {
+    width: 150px;
+    height: 130px;
+    background-color: #5bd756;
+    animation: spin 3s linear infinite;
+}
+
+.box-pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #fd0000;
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.image-animate {
+    width: 400px;
+    height: 400px;
+    background-image: url('https://i.ytimg.com/vi/Rl_pud2tEbg/sddefault.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    animation: slide 3s ease-in-out infinite;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); background-color: #2980b9; }
+    100% { transform: scale(1); }
+}
+
+@keyframes slide {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
